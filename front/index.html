@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <!-- DaisyUi and Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Goole Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Style for basic things -->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'para-color': "#000000",
+
+
+
+
+                    }
+                }
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div class="container mx-auto bg-[#9cbfe2] px-8 py-8 grid gap-5 grid-cols-4">
+        <section class="bg-white px-5 py-5 rounded-lg col-span-4">
+
+            <nav class="flex justify-between items-center ">
+                <div class="flex gap-4 items-center">
+                    <img src="../assets/logo.png" alt="Logo">
+                    <h2>Dev<span class="font-semibold">Board</span></h2>
+                </div>
+                <div class="flex gap-8 items-center">
+                    <div class="flex gap-3 rounded-xl bg-[#dfeaf5] px-4 py-2 items-center">
+                        <img src="../assets/checkbox.png" alt="">
+                        <h3 class="font-bold text-2xl">23</h3>
+                    </div>
+                    <img src="../assets/theme-btn.png" alt="">
+                </div>
+
+            </nav>
+        </section>
+        <!-- <br> -->
+
+        <!-- Main Section -->
+
+        <!-- Main Section / Left -->
+        <section class="bg-white px-5 py-5 rounded-lg col-span-3">
+            <div class="flex justify-between items-center">
+
+                <!-- Header -->
+
+                <!--Header 1st Part -->
+                <div class="flex items-center px-4 gap-4 py-7 rounded-lg bg-[#dfeaf5]">
+                    <div>
+                        <img src="../assets/checkbox.png" alt="">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <p>Task Assigned</p>
+                        <h3 class="font-bold text-2xl">5</h3>
+                    </div>
+                </div>
+
+                <!--Header 2nd Part -->
+                <div class="flex items-center gap-4 bg-orange-400 px-8 py-8 rounded-lg">
+                    <img class="w-[56px] h-[56px]" src="../assets/board.png" alt="">
+                    <p class="text-white font-semibold">Discover Something New Today!</p>
+                </div>
+
+                <!--Header 3rd Part -->
+                <div class="flex items-center px-4 py-8 gap-4 rounded-lg bg-[#dfeaf5]">
+                    <div>
+                        <img src="../assets/calender.png" alt="">
+                    </div>
+                    <div class="flex items-center flex-col gap-2">
+                        <p>Friday,</p>
+                        <h3>Feb 28 2025</h3>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <!-- For Install Dashed Border -->
+            <div class=" border-dashed border border-pink-200"></div>
+
+            <!-- 6 Boxes For compeleting task section -->
+            <br>
+
+            <div class="grid grid-cols-3 gap-5">
+                <!-- box-1 -->
+                <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
+                    <div class="">
+                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">ShopEase</div>
+                        <div class="my-2 ">
+                            <h4 class="font-semibold">Fix Mobile Button Issue</h4>
+                        </div>
+                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-600 text-[14px]">Deadline</p>
+                            <p class="font-semibold text-[14px]">15 March 2025</p>
+                        </div>
+                        <button class="btn btn-primary">Completed</button>
+                    </div>
+                </div>
+                <!-- box-2 -->
+                <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
+                    <div class="">
+                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">CloudSync</div>
+                        <div class="my-2">
+                            <h4 class="font-semibold">Add Dark Mode</h4>
+                        </div>
+                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-600 text-[14px]">Deadline</p>
+                            <p class="font-semibold text-[14px]">15 March 2025</p>
+                        </div>
+                        <button class="btn btn-primary">Completed</button>
+                    </div>
+                </div>
+                <!-- box-3 -->
+                <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
+                    <div class="">
+                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">SwiftPay</div>
+                        <div class=" my-2 ">
+                            <h4 class="font-semibold">Optimize Home Page</h4>
+                        </div>
+                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-600 text-[14px]">Deadline</p>
+                            <p class="font-semibold text-[14px]">15 March 2025</p>
+                        </div>
+                        <button class="btn btn-primary">Completed</button>
+                    </div>
+                </div>
+                <!-- box-4 -->
+                <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
+                    <div class="">
+                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Meta</div>
+                        <div class=" my-2 ">
+                            <h4 class="font-semibold">Add New Emoji 🤲</h4>
+                        </div>
+                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-600 text-[14px]">Deadline</p>
+                            <p class="font-semibold text-[14px]">15 March 2025</p>
+                        </div>
+                        <button class="btn btn-primary">Completed</button>
+                    </div>
+                </div>
+                <!-- box-5 -->
+                <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
+                    <div class="">
+                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Google LLC</div>
+                        <div class=" my-2 ">
+                            <h4 class="font-semibold">Integrate OpenAI API </h4>
+                        </div>
+                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-600 text-[14px]">Deadline</p>
+                            <p class="font-semibold text-[14px]">15 March 2025</p>
+                        </div>
+                        <button class="btn btn-primary">Completed</button>
+                    </div>
+                </div>
+                <!-- box-6  -->
+                <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
+                    <div class="">
+                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Glassdoar</div>
+                        <div class="my-2 ">
+                            <h4 class="font-semibold">Improve Job searching </h4>
+                        </div>
+                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-600 text-[14px]">Deadline</p>
+                            <p class="font-semibold text-[14px]">15 March 2025</p>
+                        </div>
+                        <button class="btn btn-primary">Completed</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- <br> -->
+
+        <!-- Main Section / Right(Activity Log)-->
+        <section class="bg-white px-5 py-5 rounded-lg">
+            <div class="text-center">
+                    <div class="flex gap-3 justify-center">
+                        <img class="" src="../assets/activity.png" alt="">
+                        <h5 class="font-semibold text-[18px] ">Activity Log</h5>
+                    </div>
+
+                <button class="btn btn-primary my-4">Clear History</button>
+
+            </div>
+            <div class="px-2 py-2 bg-gray-100">
+                <p>You have completed the task add Dark Mode at 12:36:18 PM</p>
+            </div>
+            <div class="px-2 py-2 bg-gray-100 my-4">
+                <p>You have completed the task add Dark Mode at 10:13:55 PM</p>
+            </div>
+
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
