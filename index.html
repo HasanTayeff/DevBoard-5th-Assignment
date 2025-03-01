@@ -23,6 +23,13 @@
             padding: 0px;
             font-family: "Poppins", sans-serif;
         }
+
+        .activity-log-class {
+            background-color: #dfeaf5;
+            padding: 8px;
+            border-radius: 6px;
+
+        }
     </style>
 
     <script>
@@ -57,7 +64,7 @@
                 <div class="flex gap-8 items-center">
                     <div class="flex gap-3 rounded-xl bg-[#dfeaf5] px-4 py-2 items-center">
                         <img src="assets/checkbox.png" alt="">
-                        <h3 class="font-bold text-2xl">23</h3>
+                        <h3 id="total-assigned" class="font-bold text-2xl">23</h3>
                     </div>
                     <img src="assets/theme-btn.png" alt="">
                 </div>
@@ -76,29 +83,29 @@
 
                 <!--Header 1st Part -->
                 <div class="flex items-center px-4 gap-4 py-7 rounded-lg bg-[#dfeaf5]">
-                    <div>
+                    <div class="bg-white p-3 rounded-full">
                         <img src="assets/checkbox.png" alt="">
                     </div>
                     <div class="flex flex-col gap-2">
                         <p>Task Assigned</p>
-                        <h3 class="font-bold text-2xl">5</h3>
+                        <h3 id="remained-task" class="font-bold text-2xl">6</h3>
                     </div>
                 </div>
 
                 <!--Header 2nd Part -->
                 <div class="flex items-center gap-4 bg-orange-400 px-8 py-8 rounded-lg">
                     <img class="w-[56px] h-[56px]" src="assets/board.png" alt="">
-                    <p class="text-white font-semibold">Discover Something New Today!</p>
+                    <p id="next" class="text-white font-semibold">Discover Something New Today!</p>
                 </div>
 
                 <!--Header 3rd Part -->
                 <div class="flex items-center px-4 py-8 gap-4 rounded-lg bg-[#dfeaf5]">
-                    <div>
+                    <div class="bg-white p-3 rounded-full">
                         <img src="assets/calender.png" alt="">
                     </div>
                     <div class="flex flex-col gap-2">
-                        <p class="text-gray-600 text-[14px]">Friday,</p>
-                        <h3 class="font-semibold">Feb 28 2025</h3>
+                        <p id="day" class="text-gray-600 text-[14px]"></p>
+                        <h3 id="date" class="font-semibold"></h3>
                     </div>
                 </div>
             </div>
@@ -113,122 +120,123 @@
             <div class="grid grid-cols-3 gap-5">
                 <!-- box-1 -->
                 <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
-                    <div class="">
-                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">ShopEase</div>
-                        <div class="my-4">
-                            <h4 class="font-semibold">Fix Mobile Button Issue</h4>
-                        </div>
-                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
-                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
-                        </div>
+
+                    <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">ShopEase</div>
+                    <div class="my-4">
+                        <h4 class="font-semibold title-showcase">Fix Mobile Button Issue</h4>
                     </div>
+                    <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                        <p class="text-gray-600 text-[14px]">Resolve unresponsive mobile button for smooth user experience and functionality.</p>
+                    </div>
+
 
                     <div class="flex justify-between">
                         <div>
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">15 March 2025</p>
                         </div>
-                        <button class="btn btn-primary">Completed</button>
+                        <button id="completed-btn-1" class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100" 
+                           >Completed</button>
                     </div>
                 </div>
                 <!-- box-2 -->
                 <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
-                    <div class="">
-                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">CloudSync</div>
-                        <div class="my-4">
-                            <h4 class="font-semibold">Add Dark Mode</h4>
-                        </div>
-                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
-                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
-                        </div>
+
+                    <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">CloudSync</div>
+                    <div class="my-4">
+                        <h4 class="font-semibold title-showcase">Add Dark Mode</h4>
                     </div>
+                    <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                        <p class="text-gray-600 text-[14px] ">Dark mode for better user experience across all lighting conditions.</p>
+                    </div>
+
 
                     <div class="flex justify-between">
                         <div>
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">15 March 2025</p>
                         </div>
-                        <button class="btn btn-primary">Completed</button>
+                        <button id="completed-btn-2" class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
                     </div>
                 </div>
                 <!-- box-3 -->
                 <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
-                    <div class="">
+                  
                         <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">SwiftPay</div>
                         <div class=" my-4 ">
-                            <h4 class="font-semibold">Optimize Home Page</h4>
+                            <h4 class="font-semibold title-showcase">Optimize Home Page</h4>
                         </div>
                         <div class="bg-white py-2 px-3 rounded-lg mb-4">
-                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
+                            <p class="text-gray-600 text-[14px]">Optimize home page for faster load times and smoother navigation.</p>
                         </div>
-                    </div>
+                 
 
                     <div class="flex justify-between">
                         <div>
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">15 March 2025</p>
                         </div>
-                        <button class="btn btn-primary">Completed</button>
+                        <button class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
                     </div>
                 </div>
                 <!-- box-4 -->
                 <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
-                    <div class="">
+                    
                         <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Meta</div>
                         <div class=" my-4 ">
-                            <h4 class="font-semibold">Add New Emoji 🤲</h4>
+                            <h4 class="font-semibold title-showcase">Add New Emoji 🤲</h4>
                         </div>
                         <div class="bg-white py-2 px-3 rounded-lg mb-4">
-                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
+                            <p class="text-gray-600 text-[14px] ">Add new emoji for enhanced expression and better user engagement.</p>
                         </div>
-                    </div>
+                 
 
                     <div class="flex justify-between">
                         <div>
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">15 March 2025</p>
                         </div>
-                        <button class="btn btn-primary">Completed</button>
+                        <button class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
                     </div>
                 </div>
                 <!-- box-5 -->
                 <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
-                    <div class="">
+                
                         <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Google LLC</div>
                         <div class=" my-4 ">
-                            <h4 class="font-semibold">Integrate OpenAI API </h4>
+                            <h4 class="font-semibold title-showcase">Integrate OpenAI API </h4>
                         </div>
                         <div class="bg-white py-2 px-3 rounded-lg mb-4">
-                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
+                            <p class="text-gray-600 text-[14px]">Integrate OpenAI API for advanced capabilities and enhanced user interactions.</p>
                         </div>
-                    </div>
+                
 
                     <div class="flex justify-between">
                         <div>
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">15 March 2025</p>
                         </div>
-                        <button class="btn btn-primary">Completed</button>
+                        <button class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
                     </div>
                 </div>
                 <!-- box-6  -->
                 <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
-                    <div class="">
+                   
                         <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Glassdoar</div>
                         <div class="my-4">
-                            <h4 class="font-semibold">Improve Job searching </h4>
+                            <h4 class="font-semibold title-showcase">Improve Job searching </h4>
                         </div>
                         <div class="bg-white py-2 px-3 rounded-lg mb-4">
-                            <p class="text-gray-600 text-[14px]">Debug using Chrome DevTools, check for overlapping</p>
+                            <p class="text-gray-600 text-[14px] ">Improve job searching with advanced filters, personalized results, and faster loading.</p>
                         </div>
-                    </div>
+                  
 
                     <div class="flex justify-between">
                         <div>
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">15 March 2025</p>
                         </div>
-                        <button id="next" class="btn btn-primary">Completed</button>
+                        <button class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
                     </div>
                 </div>
 
@@ -241,25 +249,30 @@
         <!-- Main Section / Right(Activity Log)-->
         <section class="bg-white px-5 py-5 rounded-lg">
             <div class="text-center">
-                    <div class="flex gap-3 justify-center">
-                        <img class="" src="../assets/activity.png" alt="">
-                        <h5 class="font-semibold text-[18px] ">Activity Log</h5>
-                    </div>
+                <div class="flex gap-3 justify-center">
+                    <img class="" src="../assets/activity.png" alt="">
+                    <h5 id="remove-activity" class="font-semibold text-[18px] ">Activity Log</h5>
+                </div>
 
-                <button class="btn btn-primary my-4">Clear History</button>
+
+                <button id="clear-history" class="btn btn-primary my-4">Clear History</button>
 
             </div>
-            <div class="px-2 py-2 bg-gray-100">
-                <p>You have completed the task add Dark Mode at 12:36:18 PM</p>
-            </div>
-            <div class="px-2 py-2 bg-gray-100 my-4">
-                <p>You have completed the task add Dark Mode at 10:13:55 PM</p>
+
+            <div id="activity-log-comment" class="flex flex-col gap-3">
+
+
+
             </div>
 
+            
 
         </section>
 
     </div>
+
+    <script src="utilities.js"></script>
+    <script src="complete-btn.js"></script>
     <script src="front.js"></script>
 
 </body>

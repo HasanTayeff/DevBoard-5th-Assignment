@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Format</title>
+</head>
+<body>
+    <div id="message" style="background: #dbeafe; padding: 10px; border-radius: 5px; font-size: 18px;"></div>
+
+    <script>
+        const time = new Date().toLocaleTimeString('en-US')
+        document.getElementById("message").textContent = 
+            `You have completed the task add Dark Mode at ${time}`;
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Day and Date</title>
+</head>
+
+<body>
+    <h1>Today's Day and Date:</h1>
+    <p id="date"></p>
+
+    <script>
+        let today = new Date();
+        let date = today.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+        document.getElementById('date').textContent = date;  // Example: "Sunday, March 2, 2025"
+
+
+
+        // let today = new Date();
+        // let date = today.toLocaleDateString('en-US', { weekday: 'long' });  // Format: Day, MM/DD/YYYY
+        // document.getElementById('date').textContent = date;
+    </script>
+</body>
+
+</html>
