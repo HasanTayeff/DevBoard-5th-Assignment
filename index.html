@@ -32,46 +32,30 @@
         }
     </style>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                        'para-color': "#000000",
-
-
-
-
-                    }
-                }
-            }
-        }
-    </script>
-
 
 </head>
 
 <body>
-    <div class="container mx-auto bg-[#9cbfe2] px-8 py-8 grid gap-5 grid-cols-4">
-        <section class="bg-white px-5 py-5 rounded-lg col-span-4">
+    <div id="change-body-color" class="container mx-auto bg-[#9cbfe2] px-8 py-8 grid gap-5 grid-cols-4">
+        <section class="bg-white px-5 py-4 rounded-lg col-span-4">
 
             <nav class="flex justify-between items-center ">
                 <div class="flex gap-4 items-center">
                     <img src="assets/logo.png" alt="Logo">
-                    <h2>Dev<span class="font-semibold">Board</span></h2>
+                    <h2 class="text-3xl">Dev<span class="font-semibold font-blue">Board</span></h2>
                 </div>
                 <div class="flex gap-8 items-center">
                     <div class="flex gap-3 rounded-xl bg-[#dfeaf5] px-4 py-2 items-center">
                         <img src="assets/checkbox.png" alt="">
                         <h3 id="total-assigned" class="font-bold text-2xl">23</h3>
                     </div>
-                    <img src="assets/theme-btn.png" alt="">
+                    <img id="change-theme" class="px-2 py-2 bg-[#dfeaf5] rounded-full" src="assets/theme-btn.png"
+                        alt="">
                 </div>
 
             </nav>
         </section>
-        <!-- <br> -->
+
 
         <!-- Main Section -->
 
@@ -82,25 +66,26 @@
                 <!-- Header -->
 
                 <!--Header 1st Part -->
-                <div class="flex items-center px-4 gap-4 py-7 rounded-lg bg-[#dfeaf5]">
-                    <div class="bg-white p-3 rounded-full">
-                        <img src="assets/checkbox.png" alt="">
-                    </div>
+                <div class="flex items-center px-4 gap-4 py-5 rounded-lg bg-[#dfeaf5] w-[25%]">
+
+                    <img class="px-2 py-2 bg-white rounded-full" src="assets/checkbox.png" alt="">
+
                     <div class="flex flex-col gap-2">
-                        <p>Task Assigned</p>
+                        <p class="font-semibold">Task Assigned</p>
                         <h3 id="remained-task" class="font-bold text-2xl">6</h3>
                     </div>
                 </div>
 
                 <!--Header 2nd Part -->
-                <div class="flex items-center gap-4 bg-orange-400 px-8 py-8 rounded-lg">
+                <div id="next"
+                    class="flex items-center gap-4 px-8 py-6 rounded-lg bg-gradient-to-r from-blue-700 to-blue-400">
                     <img class="w-[56px] h-[56px]" src="assets/board.png" alt="">
-                    <p id="next" class="text-white font-semibold">Discover Something New Today!</p>
+                    <p class="text-white font-semibold">Discover Something New Today!</p>
                 </div>
 
                 <!--Header 3rd Part -->
-                <div class="flex items-center px-4 py-8 gap-4 rounded-lg bg-[#dfeaf5]">
-                    <div class="bg-white p-3 rounded-full">
+                <div class="flex items-center px-4 py-[26px] gap-4 rounded-lg bg-[#dfeaf5]  w-[25%]">
+                    <div class="px-2 py-2 bg-white rounded-full">
                         <img src="assets/calender.png" alt="">
                     </div>
                     <div class="flex flex-col gap-2">
@@ -112,7 +97,7 @@
             <br>
 
             <!-- For Install Dashed Border -->
-            <div class=" border-dashed border border-pink-200"></div>
+            <div class=" border-dashed border border-[#dfeaf5]"></div>
 
             <!-- 6 Boxes For compeleting task section -->
             <br>
@@ -126,7 +111,8 @@
                         <h4 class="font-semibold title-showcase">Fix Mobile Button Issue</h4>
                     </div>
                     <div class="bg-white py-2 px-3 rounded-lg mb-4">
-                        <p class="text-gray-600 text-[14px]">Resolve unresponsive mobile button for smooth user experience and functionality.</p>
+                        <p class="text-gray-600 text-[14px]">Resolve unresponsive mobile button for smooth user
+                            experience and functionality.</p>
                     </div>
 
 
@@ -135,8 +121,8 @@
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">15 March 2025</p>
                         </div>
-                        <button id="completed-btn-1" class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100" 
-                           >Completed</button>
+                        <button id="completed-btn-1"
+                            class="px-4 py-3 rounded-lg text-white complete-btn-loop bg-gradient-to-r from-blue-800 to-blue-500  disabled:opacity-30 ">Completed</button>
                     </div>
                 </div>
                 <!-- box-2 -->
@@ -154,89 +140,98 @@
                     <div class="flex justify-between">
                         <div>
                             <p class="text-gray-600 text-[14px]">Deadline</p>
-                            <p class="font-semibold text-[14px]">15 March 2025</p>
+                            <p class="font-semibold text-[14px]">21 March 2025</p>
                         </div>
-                        <button id="completed-btn-2" class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
+                        <button id="completed-btn-1"
+                            class="px-4 py-3 rounded-lg text-white complete-btn-loop bg-gradient-to-r from-blue-800 to-blue-500  disabled:opacity-30 ">Completed
+                        </button>
                     </div>
                 </div>
                 <!-- box-3 -->
                 <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
-                  
-                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">SwiftPay</div>
-                        <div class=" my-4 ">
-                            <h4 class="font-semibold title-showcase">Optimize Home Page</h4>
-                        </div>
-                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
-                            <p class="text-gray-600 text-[14px]">Optimize home page for faster load times and smoother navigation.</p>
-                        </div>
-                 
+
+                    <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">SwiftPay</div>
+                    <div class=" my-4 ">
+                        <h4 class="font-semibold title-showcase">Optimize Home Page</h4>
+                    </div>
+                    <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                        <p class="text-gray-600 text-[14px]">Optimize home page for faster load times and smoother navigation.</p>
+                    </div>
+
 
                     <div class="flex justify-between">
                         <div>
                             <p class="text-gray-600 text-[14px]">Deadline</p>
-                            <p class="font-semibold text-[14px]">15 March 2025</p>
+                            <p class="font-semibold text-[14px]">25 March 2025</p>
                         </div>
-                        <button class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
+                        <button id="completed-btn-1"
+                            class="px-4 py-3 rounded-lg text-white complete-btn-loop bg-gradient-to-r from-blue-800 to-blue-500  disabled:opacity-30 ">Completed
+                        </button>
                     </div>
                 </div>
                 <!-- box-4 -->
                 <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
-                    
-                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Meta</div>
-                        <div class=" my-4 ">
-                            <h4 class="font-semibold title-showcase">Add New Emoji 🤲</h4>
-                        </div>
-                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
-                            <p class="text-gray-600 text-[14px] ">Add new emoji for enhanced expression and better user engagement.</p>
-                        </div>
-                 
+
+                    <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Meta</div>
+                    <div class=" my-4 ">
+                        <h4 class="font-semibold title-showcase">Add New Emoji 🤲</h4>
+                    </div>
+                    <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                        <p class="text-gray-600 text-[14px] ">Add new emoji for enhanced expression and better user engagement.</p>
+                    </div>
+
 
                     <div class="flex justify-between">
                         <div>
                             <p class="text-gray-600 text-[14px]">Deadline</p>
-                            <p class="font-semibold text-[14px]">15 March 2025</p>
+                            <p class="font-semibold text-[14px]">02 April 2025</p>
                         </div>
-                        <button class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
+                    <button id="completed-btn-1"
+                        class="px-4 py-3 rounded-lg text-white complete-btn-loop bg-gradient-to-r from-blue-800 to-blue-500  disabled:opacity-30 ">Completed
+                    </button>
                     </div>
                 </div>
                 <!-- box-5 -->
                 <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
-                
-                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Google LLC</div>
-                        <div class=" my-4 ">
-                            <h4 class="font-semibold title-showcase">Integrate OpenAI API </h4>
-                        </div>
-                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
-                            <p class="text-gray-600 text-[14px]">Integrate OpenAI API for advanced capabilities and enhanced user interactions.</p>
-                        </div>
-                
+
+                    <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Google LLC</div>
+                    <div class=" my-4 ">
+                        <h4 class="font-semibold title-showcase">Integrate OpenAI API </h4>
+                    </div>
+                    <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                        <p class="text-gray-600 text-[14px]">Integrate OpenAI API for advanced capabilities and enhanced user interactions.</p>
+                    </div>
+
 
                     <div class="flex justify-between">
                         <div>
                             <p class="text-gray-600 text-[14px]">Deadline</p>
-                            <p class="font-semibold text-[14px]">15 March 2025</p>
+                            <p class="font-semibold text-[14px]">05 April 2025</p>
                         </div>
-                        <button class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
+                        <button
+                            class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
                     </div>
                 </div>
                 <!-- box-6  -->
                 <div class="bg-[#dfeaf5] py-4 px-3 rounded-lg">
-                   
-                        <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Glassdoar</div>
-                        <div class="my-4">
-                            <h4 class="font-semibold title-showcase">Improve Job searching </h4>
-                        </div>
-                        <div class="bg-white py-2 px-3 rounded-lg mb-4">
-                            <p class="text-gray-600 text-[14px] ">Improve job searching with advanced filters, personalized results, and faster loading.</p>
-                        </div>
-                  
+
+                    <div class="px-2 py-1 bg-white inline rounded-md text-gray-600 text-[14px]">Glassdoar</div>
+                    <div class="my-4">
+                        <h4 class="font-semibold title-showcase">Improve Job searching </h4>
+                    </div>
+                    <div class="bg-white py-2 px-3 rounded-lg mb-4">
+                        <p class="text-gray-600 text-[14px] ">Improve job searching with advanced filters, personalized results, and faster loading.</p>
+                    </div>
+
 
                     <div class="flex justify-between">
                         <div>
                             <p class="text-gray-600 text-[14px]">Deadline</p>
-                            <p class="font-semibold text-[14px]">15 March 2025</p>
+                            <p class="font-semibold text-[14px]">09 April 2025</p>
                         </div>
-                        <button class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
+                        <button id="completed-btn-1"
+                        class="px-4 py-3 rounded-lg text-white complete-btn-loop bg-gradient-to-r from-blue-800 to-blue-500  disabled:opacity-30 ">Completed
+                    </button>
                     </div>
                 </div>
 
@@ -255,7 +250,8 @@
                 </div>
 
 
-                <button id="clear-history" class="btn btn-primary my-4">Clear History</button>
+                <button id="clear-history" class="px-4 py-3 rounded-lg text-white bg-gradient-to-r from-blue-800 to-blue-500 my-4 ">Clear History</button>
+                <div class=" border-dashed border border-[#dfeaf5] mb-3"></div>
 
             </div>
 
@@ -265,7 +261,7 @@
 
             </div>
 
-            
+
 
         </section>
 

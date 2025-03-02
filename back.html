@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Board</title>
 
     <!-- DaisyUi and Tailwind CSS CDN -->
@@ -34,10 +34,10 @@
             <nav class="flex justify-between items-center ">
                 <div class="flex gap-4 items-center">
                     <img src="../assets/logo.png" alt="Logo">
-                    <h2 class="text-2xl">Dev<span class="font-semibold">Board</span></h2>
+                    <h2 class="text-3xl">Dev<span class="font-semibold">Board</span></h2>
                 </div>
 
-                <button id="back-page-btn" class="btn btn-primary">Back to Desk</button>
+                <button id="back-page-btn" class="px-4 py-3 rounded-lg text-white bg-gradient-to-r from-blue-800 to-blue-500 ">Back to Desk</button>
 
 
             </nav>
@@ -50,25 +50,25 @@
             <div class="text-center font-semibold text-2xl">Blogs</div>
             <div class="rounded-lg bg-white">
                 <h5 class="font-semibold px-5 py-5">Question-1: &nbsp; What are the different ways to select an element in the DOM?</h5>
-                <div class="border border-dashed  border-pink-200"></div>
+                <div class=" border-dashed border border-[#dfeaf5]"></div>
                 <p class="px-5 py-5">There are many way of selecting an element from html document. Among them, some common ways are getElementsByClassName(), getElementById(), getElementsByTagName(), querySelector(), querySelectorAll().</p>
 
             </div>
             <div class="rounded-lg bg-white">
                 <h5 class="font-semibold px-5 py-5">Question-2: &nbsp; What is the difference between innerHTML, innerText, and textContent ?</h5>
-                <div class="border border-dashed  border-pink-200"></div>
+                <div class=" border-dashed border border-[#dfeaf5]"></div>
                 <p class="px-5 py-5">While innerHTML return all the element inside an element inluding tag and text, innerText return only the value inside of an element. textContent is likely an innerText, however,it provides the all text including comments.</p>
 
             </div>
             <div class="rounded-lg bg-white">
                 <h5 class="font-semibold px-5 py-5">Question-3: &nbsp; What is event delegation in the DOM?</h5>
-                <div class="border border-dashed  border-pink-200"></div>
+                <div class=" border-dashed border border-[#dfeaf5]"></div>
                 <p class="px-5 py-5">Sometimes it becomes irriatting to write more and more addEventListener to control elements, so, event delegation can make it more easier by adding addEventListener to parentNode of any elements.</p>
 
             </div>
             <div class="rounded-lg bg-white">
                 <h5 class="font-semibold px-5 py-5">Question-4: &nbsp; What is event bubbling in the DOM?</h5>
-                <div class="border border-dashed  border-pink-200"></div>
+                <div class=" border-dashed border border-[#dfeaf5]"></div>
                 <p class="px-5 py-5">Browser does not know the exact location when any user click on a certain button. So, what browser does to find its loaction is propagate from parentNode to childNode until it finds where user click. Afterwards, it comeback to its origin. And this way is called event bubbling in DOM.</p>
 
             </div>
@@ -83,7 +83,14 @@
 
     </div>
 
- <script src="./back.html"></script>
+<script>
+    document.getElementById('back-page-btn').addEventListener('click', function(event){
+    window.location.href = './index.html';
+
+    console.log('o amar vai')
+})
+</script>
+ 
 
 
 </body>
