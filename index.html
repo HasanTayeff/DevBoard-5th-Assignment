@@ -39,7 +39,7 @@
     <div id="change-body-color" class="container mx-auto bg-[#9cbfe2] px-8 py-8 grid gap-5 grid-cols-4">
         <section class="bg-white px-5 py-4 rounded-lg col-span-4">
 
-            <nav class="flex justify-between items-center ">
+            <nav class="flex justify-between items-center md:gap-3 ">
                 <div class="flex gap-4 items-center">
                     <img src="assets/logo.png" alt="">
                     <h2 class="text-3xl">Dev<span class="font-semibold font-blue">Board</span></h2>
@@ -61,26 +61,25 @@
 
         <!-- Main Section / Left -->
         <section class="bg-white px-5 py-5 rounded-lg col-span-3">
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between ">
 
                 <!-- Header -->
 
                 <!--Header 1st Part -->
-                <div class="flex items-center px-4 gap-4 py-5 rounded-lg bg-[#dfeaf5] w-[25%]">
+                <div class="flex items-center lg:px-4 lg: gap-4 lg:py-5 rounded-lg bg-[#dfeaf5] w-[25%]">
 
                     <img class="px-2 py-2 bg-white rounded-full" src="assets/checkbox.png" alt="">
 
                     <div class="flex flex-col gap-2">
-                        <p class="font-semibold">Task Assigned</p>
+                        <p class="font-semibold text-[13px]">Task Assigned</p>
                         <h3 id="remained-task" class="font-bold text-2xl">6</h3>
                     </div>
                 </div>
 
                 <!--Header 2nd Part -->
-                <div id="next"
-                    class="flex items-center gap-4 px-8 py-6 rounded-lg bg-gradient-to-r from-blue-700 to-blue-400">
+                <div id="next" class="flex items-center gap-4 px-3 py-6 rounded-lg bg-gradient-to-r from-blue-700 to-blue-400 w-[40%]">
                     <img class="w-[56px] h-[56px]" src="assets/board.png" alt="">
-                    <p class="text-white font-semibold">Discover Something New Today!</p>
+                    <p class="text-white font-semibold md:text-[10px] lg:text-[14px]">Discover Something New Today!</p>
                 </div>
 
                 <!--Header 3rd Part -->
@@ -121,8 +120,9 @@
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">15 March 2025</p>
                         </div>
-                        <button id="completed-btn-1"
-                            class="px-4 py-3 rounded-lg text-white complete-btn-loop bg-gradient-to-r from-blue-800 to-blue-500  disabled:opacity-30 ">Completed</button>
+                        <button
+                            class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed
+                        </button>
                     </div>
                 </div>
                 <!-- box-2 -->
@@ -142,8 +142,8 @@
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">21 March 2025</p>
                         </div>
-                        <button id="completed-btn-1"
-                            class="px-4 py-3 rounded-lg text-white complete-btn-loop bg-gradient-to-r from-blue-800 to-blue-500  disabled:opacity-30 ">Completed
+                        <button
+                            class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed
                         </button>
                     </div>
                 </div>
@@ -164,8 +164,8 @@
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">25 March 2025</p>
                         </div>
-                        <button id="completed-btn-1"
-                            class="px-4 py-3 rounded-lg text-white complete-btn-loop bg-gradient-to-r from-blue-800 to-blue-500  disabled:opacity-30 ">Completed
+                        <button
+                            class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed
                         </button>
                     </div>
                 </div>
@@ -186,9 +186,9 @@
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">02 April 2025</p>
                         </div>
-                    <button id="completed-btn-1"
-                        class="px-4 py-3 rounded-lg text-white complete-btn-loop bg-gradient-to-r from-blue-800 to-blue-500  disabled:opacity-30 ">Completed
-                    </button>
+                        <button
+                            class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed
+                        </button>
                     </div>
                 </div>
                 <!-- box-5 -->
@@ -209,7 +209,8 @@
                             <p class="font-semibold text-[14px]">05 April 2025</p>
                         </div>
                         <button
-                            class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed</button>
+                            class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed
+                        </button>
                     </div>
                 </div>
                 <!-- box-6  -->
@@ -229,9 +230,9 @@
                             <p class="text-gray-600 text-[14px]">Deadline</p>
                             <p class="font-semibold text-[14px]">09 April 2025</p>
                         </div>
-                        <button id="completed-btn-1"
-                        class="px-4 py-3 rounded-lg text-white complete-btn-loop bg-gradient-to-r from-blue-800 to-blue-500  disabled:opacity-30 ">Completed
-                    </button>
+                        <button
+                            class="btn complete-btn-loop btn-primary disabled:bg-slate-300 disabled:opacity-100">Completed
+                        </button>
                     </div>
                 </div>
 
@@ -239,7 +240,6 @@
 
         </section>
 
-        <!-- <br> -->
 
         <!-- Main Section / Right(Activity Log)-->
         <section class="bg-white px-5 py-5 rounded-lg">

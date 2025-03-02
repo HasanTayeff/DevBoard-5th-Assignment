@@ -52,13 +52,3 @@ for(let button of buttons){
     
 
 }
-
-
-
-
-
-
-
-
-
-
